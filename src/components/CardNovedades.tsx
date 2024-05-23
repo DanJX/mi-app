@@ -46,9 +46,9 @@ export default function RecipeReviewCard() {
     };
 
     return (
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center',flexWrap: 'wrap', gap: '20px' }}>
             {/* Genshin */}
-            <Card sx={{ maxWidth: 345, background: '#1d1d22', color: '#863b8d' }}>
+            <Card sx={{ width: { xs: '100%', sm: '48%', md: '32%' }, background: '#1d1d22', color: '#863b8d' }}>
                 <CardHeader
                     avatar={
                         <Avatar sx={{ bgcolor: red[500] }} aria-label="Logo" src={logonov1}>
@@ -73,7 +73,7 @@ export default function RecipeReviewCard() {
                 />
             </Card>
             {/* Minecraft */}
-            <Card sx={{ maxWidth: 345, background: '#1d1d22', color: '#863b8d' }}>
+            <Card sx={{ width: { xs: '100%', sm: '48%', md: '32%' }, background: '#1d1d22', color: '#863b8d' }}>
                 <CardHeader
                     avatar={
                         <Avatar sx={{ bgcolor: red[500] }} aria-label="Logo" src={logonov2}>
@@ -98,7 +98,7 @@ export default function RecipeReviewCard() {
                 />
             </Card>
             {/* LOL */}
-            <Card sx={{ maxWidth: 345, background: '#1d1d22', color: '#863b8d' }}>
+            <Card sx={{ width: { xs: '100%', sm: '48%', md: '32%' }, background: '#1d1d22', color: '#863b8d' }}>
                 <CardHeader
                     avatar={
                         <Avatar sx={{ bgcolor: red[500] }} aria-label="Logo" src={logonov3}>
@@ -123,7 +123,7 @@ export default function RecipeReviewCard() {
                 />
             </Card>
             {/* Mortal Kombat */}
-            <Card sx={{ maxWidth: 345, background: '#1d1d22', color: '#863b8d' }}>
+            <Card sx={{ width: { xs: '100%', sm: '48%', md: '32%' }, background: '#1d1d22', color: '#863b8d' }}>
                 <CardHeader
                     avatar={
                         <Avatar sx={{ bgcolor: red[500] }} aria-label="Logo" src={logonov4}>
@@ -147,7 +147,7 @@ export default function RecipeReviewCard() {
                 />
             </Card>
             {/* Spiderman */}
-            <Card sx={{ maxWidth: 345, background: '#1d1d22', color: '#863b8d' }}>
+            <Card sx={{ width: { xs: '100%', sm: '48%', md: '32%' }, background: '#1d1d22', color: '#863b8d' }}>
                 <CardHeader
                     avatar={
                         <Avatar sx={{ bgcolor: red[500] }} aria-label="Logo" src={logonov5}>
@@ -160,7 +160,7 @@ export default function RecipeReviewCard() {
                     } />
                 <CardContent>
                     <Typography variant="body2" sx={{ color: 'white', fontWeight: 'bold' }}>
-                    Si tienes Spider-Man podrás pagar 10 dólares para conseguir la remasterización en PS5
+                        Si tienes Spider-Man podrás pagar 10 dólares para conseguir la remasterización en PS5
                     </Typography>
                 </CardContent>
                 <CardMedia
@@ -171,7 +171,7 @@ export default function RecipeReviewCard() {
                 />
             </Card>
             {/* GTA V */}
-            <Card sx={{ maxWidth: 345, background: '#1d1d22', color: '#863b8d' }}>
+            <Card sx={{ width: { xs: '100%', sm: '48%', md: '32%' }, background: '#1d1d22', color: '#863b8d' }}>
                 <CardHeader
                     avatar={
                         <Avatar sx={{ bgcolor: red[500] }} aria-label="Logo" src={logonov6}>
@@ -184,7 +184,7 @@ export default function RecipeReviewCard() {
                     } />
                 <CardContent>
                     <Typography variant="body2" sx={{ color: 'white', fontWeight: 'bold' }}>
-                    El multijugador de GTA 5 se actualiza con recompensas extras.
+                        El multijugador de GTA 5 se actualiza con recompensas extras.
                     </Typography>
                 </CardContent>
                 <CardMedia
