@@ -13,6 +13,9 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import VideogameAssetOffIcon from '@mui/icons-material/VideogameAssetOff';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import profileImage from '../../assets/profile.png';
+import logoImage from '../../assets/logo.png';
+import { Avatar } from '@mui/material';
 
 export default function PrimarySearchAppBar() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -80,11 +83,9 @@ export default function PrimarySearchAppBar() {
         >
             <MenuItem>
                 <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                    <Badge badgeContent={4} color="error">
-                        <FavoriteIcon />
-                    </Badge>
+                    <FavoriteIcon />
                 </IconButton>
-                <p>Messages</p>
+                <p>Favoritos</p>
             </MenuItem>
             <MenuItem>
                 <IconButton
@@ -92,11 +93,9 @@ export default function PrimarySearchAppBar() {
                     aria-label="show 17 new notifications"
                     color="inherit"
                 >
-                    <Badge badgeContent={17} color="error">
-                        <NotificationsIcon />
-                    </Badge>
+                    <NotificationsIcon />
                 </IconButton>
-                <p>Notifications</p>
+                <p>Notificaciones</p>
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
                 <IconButton
@@ -106,9 +105,9 @@ export default function PrimarySearchAppBar() {
                     aria-haspopup="true"
                     color="inherit"
                 >
-                    <AccountCircle />
+                    <Avatar alt='Profile' src={profileImage}></Avatar>
                 </IconButton>
-                <p>Profile</p>
+                <p>Perfil</p>
             </MenuItem>
         </Menu>
     );
@@ -123,8 +122,10 @@ export default function PrimarySearchAppBar() {
                         component="div"
                         sx={{ display: { xs: 'flex', sm: 'block' } }}
                     >
-                        <VideogameAssetOffIcon />
-                        GameNexus
+                        <Box sx={{ display: 'flex', gap: '10px' }}>
+                            <Avatar alt='Profile' src={logoImage}></Avatar>
+                            GameNexus
+                        </Box>
                     </Typography>
 
                     <Box sx={{ flexGrow: 1 }} />
@@ -148,7 +149,7 @@ export default function PrimarySearchAppBar() {
                             onClick={handleProfileMenuOpen}
                             color="inherit"
                         >
-                            <AccountCircle />
+                            <Avatar alt='Profile' src={profileImage}></Avatar>
                         </IconButton>
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
