@@ -12,29 +12,29 @@ function App() {
       {/* Cabecera */}
       <Header></Header>
       {/* Cuerpecito */}
-      <Typography sx={{ margin: '20px 100px', fontWeight: 'bold', fontSize: '2rem' }}>
-        Novedades
-      </Typography>
       <Container sx={{ marginBottom: '80px' }}>
+        <Typography sx={{ margin: '20px 0', fontWeight: 'bold', fontSize: '3rem', background: `url(${require('./assets/fondotxt.webp')})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          Novedades
+        </Typography>
         <CardNovedades></CardNovedades>
       </Container>
       <Container>
         <Divider sx={{ background: 'white' }}></Divider>
       </Container>
       {/* Ofertas */}
-      <Typography sx={{ margin: '20px 100px', fontWeight: 'bold', fontSize: '2rem' }}>
-        Ofertas
-      </Typography>
       <Container sx={{ marginBottom: '80px' }}>
+        <Typography sx={{ margin: '20px 0', fontWeight: 'bold', fontSize: '3rem', background: `url(${require('./assets/fondotxt.webp')})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          Ofertas
+        </Typography>
         <CardOfertas></CardOfertas>
       </Container>
       <Container>
         <Divider sx={{ background: 'white' }}></Divider>
       </Container>
-      <Typography sx={{ margin: '20px 100px', fontWeight: 'bold', fontSize: '2rem' }}>
-        Categorías
-      </Typography>
       <Container sx={{ marginBottom: '80px' }}>
+        <Typography sx={{ margin: '20px 0', fontWeight: 'bold', fontSize: '3rem', background: `url(${require('./assets/fondotxt.webp')})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          Categorías
+        </Typography>
         <CardCategorias></CardCategorias>
       </Container>
       <Container sx={{ marginBottom: '80px' }}>
