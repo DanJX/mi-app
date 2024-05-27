@@ -5,7 +5,6 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import { Box } from '@mui/material';
@@ -23,28 +22,7 @@ import logonov5 from '../assets/logonov5.webp';
 import nov6 from '../assets/nov6.jpg';
 import logonov6 from '../assets/logonov6.jpg';
 
-interface ExpandMoreProps extends IconButtonProps {
-    expand: boolean;
-}
-
-const ExpandMore = styled((props: ExpandMoreProps) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-    }),
-}));
-
 export default function RecipeReviewCard() {
-    const [expanded, setExpanded] = React.useState(false);
-
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
-
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center',flexWrap: 'wrap', gap: '20px' }}>
             {/* Genshin */}
