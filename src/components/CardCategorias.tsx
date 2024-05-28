@@ -12,7 +12,7 @@ import iconEstra from '../assets/estrategia.png';
 export default function IconAvatars() {
     return (
         <Container sx={{ marginBottom: '80px' }}>
-            <Typography sx={{ margin: '20px 0', fontWeight: 'bold', fontSize: '2rem', background: `url(${require('./assets/fondotxt.jpg')})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            <Typography sx={{ margin: '20px 0', fontWeight: 'bold', fontSize: '2rem', background: `url(${require('../assets/fondotxt.jpg')})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 Categorías
             </Typography>
             <Stack direction="row" spacing={2} sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
