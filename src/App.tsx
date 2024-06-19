@@ -6,6 +6,15 @@ import Divider from '@mui/material/Divider';
 import CardOfertas from './components/CardOfertas';
 import CardCategorias from './components/CardCategorias';
 import CardSlider from './components/CardSlider';
+import { Grid } from '@mui/material';
+import Informacion from './components/Informacion';
+import Form from './components/Form';
+
+import React, { Suspense, useState } from 'react';
+import SkeletonLazy from './components/SkeletonLazy';
+
+const simulateDelay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+const CardLazy = React.lazy(() => simulateDelay(2000).then(() => import('./components/CardLazy')));
 
 function App() {
   return (
@@ -13,6 +22,11 @@ function App() {
       {/* Cabecera */}
       <Header></Header>
       <CardSlider></CardSlider>
+      {/* Aqui va prueba de Lazy Loading */}
+      <Suspense fallback={<SkeletonLazy/>}>
+        <CardLazy />
+      </Suspense>
+      
       <CardNovedades></CardNovedades>
       <Container>
         <Divider sx={{ background: 'white' }}></Divider>
@@ -25,6 +39,17 @@ function App() {
       <Container sx={{ marginBottom: '80px' }}>
         <Divider sx={{ background: 'white' }}></Divider>
       </Container>
+
+      <Container>
+        <Grid container item spacing={2}>
+          <Grid item xs={12} md={12} lg={12}>
+            <Informacion />
+          </Grid>
+        </Grid>
+      </Container>
+
+      {/* Formulario */}
+      <Form></Form>
     </div>
   );
 }
