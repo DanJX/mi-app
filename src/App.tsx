@@ -12,6 +12,7 @@ import Form from './components/Form';
 
 import React, { Suspense, useState } from 'react';
 import SkeletonLazy from './components/SkeletonLazy';
+import Contador from './components/Contador';
 
 const simulateDelay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 const CardLazy = React.lazy(() => simulateDelay(2000).then(() => import('./components/CardLazy')));
@@ -26,6 +27,9 @@ function App() {
       <Suspense fallback={<SkeletonLazy/>}>
         <CardLazy />
       </Suspense>
+
+      {/* Contador */}
+      <Contador/>
       
       <CardNovedades></CardNovedades>
       <Container>
