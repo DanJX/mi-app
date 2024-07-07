@@ -13,6 +13,13 @@ import Form from './components/Form';
 import React, { Suspense, useState } from 'react';
 import SkeletonLazy from './components/SkeletonLazy';
 import Contador from './components/Contador';
+import ToDoList from './components/ToDoList';
+import SliderThumb from './components/SliderThumb';
+import SliderUrbanix from './components/SliderUrbanix';
+import Cronometro from './components/Cronometro';
+import ImgUseState from './components/ImgUseState';
+import FormColorPicker from './components/FormColorPicker';
+import ExamenContador from './components/ExamenContador';
 
 const simulateDelay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 const CardLazy = React.lazy(() => simulateDelay(2000).then(() => import('./components/CardLazy')));
@@ -22,15 +29,24 @@ function App() {
     <div className="App">
       {/* Cabecera */}
       <Header></Header>
-      <CardSlider></CardSlider>
-      {/* Aqui va prueba de Lazy Loading */}
-      <Suspense fallback={<SkeletonLazy/>}>
+      {/* <CardSlider></CardSlider>
+      <SliderUrbanix />
+      <FormColorPicker /> */}
+
+      <ExamenContador/>
+{/* 
+      <ImgUseState />
+      <Cronometro />
+
+      <Suspense fallback={<SkeletonLazy />}>
         <CardLazy />
       </Suspense>
 
-      {/* Contador */}
-      <Contador/>
       
+      <Contador />
+
+      <ToDoList />
+
       <CardNovedades></CardNovedades>
       <Container>
         <Divider sx={{ background: 'white' }}></Divider>
@@ -52,8 +68,8 @@ function App() {
         </Grid>
       </Container>
 
-      {/* Formulario */}
-      <Form></Form>
+   
+      <Form></Form> */}
     </div>
   );
 }
